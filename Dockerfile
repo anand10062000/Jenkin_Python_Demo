@@ -13,7 +13,7 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Set $PORT environment variable
-ENV PORT 8080
+ENV PORT 8085
 
 # Run the web service on container startup
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
